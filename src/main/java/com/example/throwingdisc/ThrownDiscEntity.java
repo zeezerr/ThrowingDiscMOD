@@ -151,7 +151,7 @@ public class ThrownDiscEntity extends ThrownItemEntity {
 
     private void hitEntities(ServerWorld world, Vec3d from, Vec3d to) {
         Box sweep = new Box(from, to).expand(0.5);
-        for (Entity e : world.getOtherEntities(this, sweep, this::canHit)) {
+        for (Entity e : world.getOtherEntities(this, sweep, this::canHitTarget)) {
             Box box = e.getBoundingBox().expand(0.3);
             if (!box.contains(from) && box.raycast(from, to).isEmpty()) continue;
 
@@ -177,7 +177,7 @@ public class ThrownDiscEntity extends ThrownItemEntity {
         }
     }
 
-    private boolean canHit(Entity e) {
+    private boolean canHitTarget(Entity e) {
         if (!(e instanceof LivingEntity) || !e.isAlive() || e.isSpectator() || alreadyHit.contains(e.getId())) return false;
         Entity owner = getOwner();
         if (e == owner) return false;
