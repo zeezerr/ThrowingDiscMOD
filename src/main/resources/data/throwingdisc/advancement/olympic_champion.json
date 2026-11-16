@@ -1,0 +1,15 @@
+{
+  "parent": "throwingdisc:root",
+  "display": {
+    "icon": { "id": "throwingdisc:golden_throwing_disc" },
+    "title": "Olympic Champion",
+    "description": "Kill 5 different mobs with a single throw of a disc",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": { "hit": { "trigger": "minecraft:impossible" } },
+  "requirements": [["hit"]],
+  "rewards": { "experience": 100 }
+}
