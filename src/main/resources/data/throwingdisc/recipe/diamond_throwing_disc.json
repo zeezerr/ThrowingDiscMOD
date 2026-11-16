@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": { "#": "minecraft:diamond" },
-  "pattern": [ " # ", "# #", " # " ],
-  "result": { "id": "throwingdisc:diamond_throwing_disc", "count": 1 }
-}
